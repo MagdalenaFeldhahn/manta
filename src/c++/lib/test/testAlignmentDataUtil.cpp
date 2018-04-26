@@ -91,7 +91,7 @@ buildTestBamFile(
     const std::string& bamFilename)
 {
     const HtslibBamHeaderManager bamHeaderManager(bamHeader.chrom_data);
-    bam_dumper bamDumper(bam_dumper(bamFilename.c_str(), bamHeaderManager.get()));
+    bam_dumper bamDumper(bamFilename.c_str(), bamHeaderManager.get());
     for (const bam_record& bamRecord : readsToAdd)
     {
         bamDumper.put_record(bamRecord.get_data());
