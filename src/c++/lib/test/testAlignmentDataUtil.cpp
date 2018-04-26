@@ -185,5 +185,5 @@ addSupplementaryAlignmentEvidence(
 {
     static const char svtag[] = {'S','A'};
     bam_aux_append(bamRead.get_data(),svtag,'Z',(svStr.size()+1),
-                   (uint8_t*)(svStr.c_str()));
+                   (const uint8_t*)(svStr.c_str()));
 }
